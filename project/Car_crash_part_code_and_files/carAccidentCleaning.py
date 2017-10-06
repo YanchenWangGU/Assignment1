@@ -18,5 +18,4 @@ for i in range(len(df.index)):
         count = count +1
 # print(count)
 # 0 
-df.to_csv('crashAfterCleaning.txt',sep = '|', index = False)
 df.to_csv('crashAfterCleaning.csv',sep = ',', index = False)

@@ -28,7 +28,7 @@ for i in snowNAList:
         dfNew.loc[i,'SNOW'] = mean
 # print(dfNew['SNOW'].isnull().values.ravel().sum())
 # 3
-# The missing value reduced from about 1500 entries to 3 entries
+# The missing value reduced from about 257 entries to 3 entries
 
 ## correct incorrect data in SNOW
 dateList = pd.unique(dfNew['Date']).tolist()
@@ -49,7 +49,9 @@ for i in range(len(dateList)):
         count = count+1
 # print(count)
 # 0 
-# Number of incorrect values reduces to zero
+# Number of incorrect values reduces to zero from 6
+        
+# After fixing missing and incorrect values, there are only 3 missing with no incorrect values
 
 ## Fix missing values in PRCP 
 ## Replace missing values using mean of PRCP for that day
@@ -63,7 +65,7 @@ for i in PRCPNAList:
         
 # print(dfNew['PRCP'].isnull().values.ravel().sum())
 # 0
-# Number of missing values reduces from 21 to 0
+# Number of missing values reduces from 35 to 0
     
 # Correct incorrect data in PRCP by taking mean PRCP for that day
 dateList = pd.unique(dfNew['Date']).tolist()
@@ -84,6 +86,7 @@ for i in range(len(dateList)):
         count = count+1
 # print(count)
 # 0
+# There is no missing or incorrect values in PRCP after fixing 
 
 # Save the cleaned dataset into files 
 dfNew.to_csv('weatherAfterCleaning.csv',sep = ',', index = False)
