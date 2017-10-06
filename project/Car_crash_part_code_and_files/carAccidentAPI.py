@@ -1,3 +1,4 @@
+# This file implements API to scrape car crash data from http://opendata.dc.gov/datasets/crashes-in-dc
 import requests
 import pandas as pd
 
@@ -72,5 +73,4 @@ def getCrashAPI():
 df = pd.DataFrame()
 df = getCrashAPI()
 # save the data set from API to files for future use
-df.to_csv('originalCrash.txt',sep = '|', index = False)
 df.to_csv('originalCrash.csv',sep = ',', index = False)

@@ -86,5 +86,4 @@ for i in range(len(dateList)):
 # 0
 
 # Save the cleaned dataset into files 
-dfNew.to_csv('weatherAfterCleaning.txt',sep = '|', index = False)
 dfNew.to_csv('weatherAfterCleaning.csv',sep = ',', index = False)

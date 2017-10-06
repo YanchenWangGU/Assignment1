@@ -49,7 +49,6 @@ def getWeatherDat():
 df = pd.DataFrame()
 df = getWeatherDat()
 # Store the data scraped using API into files 
-df.to_csv('weatherOri.txt',sep = '|', index = False)
 df.to_csv('weatherOri.csv',sep = ',', index = False)
 
 # Codes below aims to merge the original data frame. The original data frame
@@ -131,7 +130,6 @@ del dfNew['WT06']
 del dfNew['WT11']
 
 # Save the new merged data to file
-dfNew.to_csv('weatherAfterMerge.txt',sep = '|', index = False)
 dfNew.to_csv('weatherAfterMerge.csv',sep = ',', index = False)
 
             
